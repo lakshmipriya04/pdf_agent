@@ -25,11 +25,12 @@ def main(pdf_path, questions, slack_channel):
 
 # Example usage
 if __name__ == "__main__":
-    pdf_path = "./data/ThomasAlvaEdison.pdf"  # Replace with your PDF file path
+    pdf_path = "./data/handbook.pdf"  # Replace with your PDF file path
     questions = [
-        "What is the content about?",
-        "What are his key inventions?",
-        "what is the barcode for this product?",
+    "What is the name of the company?",
+    "Who is the CEO of the company?",
+    "What is their vacation policy?",
+    "What is the termination policy?"
     ]
     slack_channel = "#ai-chatbots"  # Replace with your Slack channel
     main(pdf_path, questions, slack_channel)

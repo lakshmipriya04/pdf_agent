@@ -16,7 +16,7 @@ def extract_text_from_pdf(pdf_path):
     return text
 
 def create_vector_store_from_pdf_text(text):
-    text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=200)
+    text_splitter = CharacterTextSplitter(separator="\n",chunk_size=1000, chunk_overlap=100)
     chunks = text_splitter.split_text(text)
     documents = [Document(page_content=chunk) for chunk in chunks]
     embeddings = OpenAIEmbeddings(openai_api_key=os.getenv("OPENAI_API_KEY"))
@@ -63,7 +63,7 @@ def generate_answer(llm, text, question):
 
     Answer:
     "The new library operates from 10 AM to 4 PM on weekends."
-    
+
     Text: {text}
 
     Question: {question}
