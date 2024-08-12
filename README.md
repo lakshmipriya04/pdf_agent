@@ -30,7 +30,6 @@ Ensure you have Python 3.7+ installed. You also need to set up an OpenAI account
 
     bash
     ```
-    Copy code
     python -m venv venv
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
